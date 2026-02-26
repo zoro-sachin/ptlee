@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PT Lee CNCET | Official Website</title>
+    <title>PT Lee CNCET | Empowering Minds, Building Futures</title>
     <meta name="description"
-        content="PT Lee Chengalvaraya Naicker College of Engineering & Technology – Affiliated to Anna University | Approved by AICTE. Quality technical education in Tamil Nadu.">
+        content="PT Lee Chengalvaraya Naicker College of Engineering & Technology – Affiliated to Anna University | Approved by AICTE. Quality technical education in Tamil Nadu since 1994.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,224 +19,633 @@
 
     <!-- ================= LOADER ================= -->
     <div class="loader" id="loader">
-        <img src="assets/logo.jpg" alt="PT Lee CNCET Logo" class="loader-logo">
-        <span class="loader-text">PTLEE CNCET</span>
+        <div class="loader-inner">
+            <div class="loader-ring"></div>
+            <img src="assets/logo.jpg" alt="PT Lee CNCET Logo" class="loader-logo">
+        </div>
+        <div class="loader-text-wrap">
+            <span class="loader-title">PTLEE CNCET</span>
+            <span class="loader-sub">Empowering Minds · Building Futures</span>
+        </div>
+        <div class="loader-progress">
+            <div class="loader-bar"></div>
+        </div>
     </div>
 
     <!-- ================= HEADER ================= -->
-    <header class="topbar">
+    <header class="topbar" id="topbar">
+        <div class="topbar-announce">
+            <span>🎓 Admissions Open 2026 — AI & DS intake now 60 seats &nbsp;|&nbsp; Anna University Affiliation
+                &nbsp;|&nbsp; AICTE Approved</span>
+        </div>
         <div class="container">
             <div class="logo">
                 <img src="assets/logo.jpg" alt="PT Lee CNCET Logo" class="topbar-logo">
-                PTLEE CNCET
+                <div class="logo-text">
+                    <span class="logo-main">PTLEE <strong>CNCET</strong></span>
+                    <span class="logo-tag">Est. 1994 · Kanchipuram</span>
+                </div>
             </div>
             <nav id="navMenu">
                 <ul>
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#home" class="nav-link">Home</a></li>
                     <li class="dropdown">
-                        <a href="#about">About</a>
+                        <a href="#about" class="nav-link">About <span class="arrow">▾</span></a>
                         <ul class="submenu">
-                            <li><a href="#about">Vision &amp; Mission</a></li>
-                            <li><a href="#about">Approvals</a></li>
-                            <li><a href="#about">Principal Desk</a></li>
+                            <li><a href="#about">🎯 Vision & Mission</a></li>
+                            <li><a href="#about">🏛️ Approvals</a></li>
+                            <li><a href="#about">👨‍💼 Principal Desk</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#departments">Departments</a>
+                        <a href="#departments" class="nav-link">Departments <span class="arrow">▾</span></a>
                         <ul class="submenu">
-                            <li><a href="#departments">B.E – CSE</a></li>
-                            <li><a href="#departments">B.E – ECE</a></li>
-                            <li><a href="#departments">B.E – EEE</a></li>
-                            <li><a href="#departments">B.E – Mechanical</a></li>
-                            <li><a href="#departments">B.Tech – IT</a></li>
-                            <li><a href="#departments">B.Tech – AI &amp; DS</a></li>
+                            <li><a href="#departments">💻 B.E – CSE</a></li>
+                            <li><a href="#departments">📡 B.E – ECE</a></li>
+                            <li><a href="#departments">⚡ B.E – EEE</a></li>
+                            <li><a href="#departments">⚙️ B.E – Mechanical</a></li>
+                            <li><a href="#departments">🖥️ B.Tech – IT</a></li>
+                            <li><a href="#departments">🤖 B.Tech – AI & DS</a></li>
                         </ul>
                     </li>
-                    <li><a href="#facilities">Facilities</a></li>
-                    <li><a href="#placement">Placement</a></li>
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#facilities" class="nav-link">Facilities</a></li>
+                    <li><a href="#placement" class="nav-link">Placement</a></li>
+                    <li><a href="#events" class="nav-link">Events</a></li>
+                    <li><a href="#contact" class="nav-link nav-cta">Contact Us</a></li>
                 </ul>
             </nav>
-            <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
+            <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
         </div>
     </header>
 
     <!-- ================= HERO ================= -->
-    <section class="hero parallax" id="home" style="background-image: url('assets/hero.jpg');">
+    <section class="hero" id="home">
+        <div class="hero-bg parallax" style="background-image: url('assets/hero.jpg');"></div>
         <div class="hero-overlay"></div>
-        <div class="hero-content hero-split">
+        <div class="hero-particles" id="particles"></div>
 
+        <div class="hero-content hero-split">
             <!-- LEFT: Text -->
             <div class="hero-text-col">
-                <div class="hero-badge">🎓 Affiliated to Anna University</div>
-                <h1 class="stagger">Empowering Minds,<br><br>Building Futures</h1>
-                <p class="hero-sub">PT Lee Chengalvaraya Naicker College of Engineering &amp; Technology<br>
-                    <span>Approved by AICTE &nbsp;|&nbsp; Kanchipuram, Tamil Nadu</span>
+                <div class="hero-badge animate-badge">
+                    <span class="badge-dot"></span>
+                    🎓 Anna University Affiliated · AICTE Approved
+                </div>
+                <h1 class="hero-headline">
+                    <span class="line-1">Empowering</span>
+                    <span class="line-2 gradient-text">Minds,</span>
+                    <span class="line-3">Building</span>
+                    <span class="line-4 gradient-text">Futures</span>
+                </h1>
+                <p class="hero-sub">
+                    PT Lee Chengalvaraya Naicker College of Engineering & Technology<br>
+                    <span>Kanchipuram, Tamil Nadu — Shaping Engineers Since 1994</span>
                 </p>
                 <div class="hero-btns">
-                    <button class="primary"
-                        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Apply
-                        Now</button>
-                    <button class="outline"
-                        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Admission
-                        Enquiry</button>
+                    <button class="btn-primary pulse-btn"
+                        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                        <span>Apply Now</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                    <button class="btn-outline"
+                        onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+                        Explore Campus
+                    </button>
                 </div>
                 <div class="hero-stats-row">
-                    <div class="hstat"><strong>1500+</strong><span>Students</span></div>
-                    <div class="hstat"><strong>120+</strong><span>Faculty</span></div>
-                    <div class="hstat"><strong>98%</strong><span>Placement</span></div>
+                    <div class="hstat">
+                        <strong class="count-num" data-count="1500">0</strong><span>+</span>
+                        <p>Students</p>
+                    </div>
+                    <div class="hstat-divider"></div>
+                    <div class="hstat">
+                        <strong class="count-num" data-count="120">0</strong><span>+</span>
+                        <p>Faculty</p>
+                    </div>
+                    <div class="hstat-divider"></div>
+                    <div class="hstat">
+                        <strong class="count-num" data-count="98">0</strong><span>%</span>
+                        <p>Placement</p>
+                    </div>
                 </div>
             </div>
 
             <!-- RIGHT: Founder Statue -->
             <div class="hero-statue-col">
                 <div class="statue-ring">
+                    <div class="orbit-ring ring-1"></div>
+                    <div class="orbit-ring ring-2"></div>
                     <div class="statue-glow"></div>
                     <img src="assets/statue_front.jpg" alt="Founder – PT Lee Chengalvaraya Naicker"
                         class="hero-statue-img">
-                    <div class="statue-label">Thiru P.T. Lee Chengalvaraya Naicker<br><em>Founder</em></div>
+                    <div class="statue-label">
+                        <span>Thiru P.T. Lee Chengalvaraya Naicker</span>
+                        <em>Founder & Visionary</em>
+                    </div>
                 </div>
             </div>
+        </div>
 
+        <div class="hero-scroll-hint">
+            <span>Scroll to Explore</span>
+            <div class="scroll-mouse">
+                <div class="scroll-dot"></div>
+            </div>
         </div>
     </section>
 
     <!-- ================= NOTICE TICKER ================= -->
-    <section class="notice">
-        <div class="notice-label">📢 Latest:</div>
-        <div class="notice-content">
-            <marquee>Admissions Open 2026 | AI &amp; DS Department Intake 60 | Campus Placement Drive March 15 | Anna
-                University Sports Winners 🏆 | New Hostel Facility Available</marquee>
+    <div class="notice-bar">
+        <div class="notice-label">📢 Live Updates</div>
+        <div class="notice-track-wrap">
+            <div class="notice-track">
+                <span>🎓 Admissions Open 2026 — Apply Now!</span>
+                <span>🤖 AI & DS Department — 60 Seats Available</span>
+                <span>💼 Campus Placement Drive — March 15, 2026</span>
+                <span>🏆 Anna University Sports Champions 2025</span>
+                <span>🏠 New Hostel & Canteen Facility Now Available</span>
+                <span>🔬 National Symposium Technovista 2026 — Register!</span>
+                <!-- duplicate for seamless loop -->
+                <span>🎓 Admissions Open 2026 — Apply Now!</span>
+                <span>🤖 AI & DS Department — 60 Seats Available</span>
+                <span>💼 Campus Placement Drive — March 15, 2026</span>
+                <span>🏆 Anna University Sports Champions 2025</span>
+                <span>🏠 New Hostel & Canteen Facility Now Available</span>
+                <span>🔬 National Symposium Technovista 2026 — Register!</span>
+            </div>
         </div>
-    </section>
+    </div>
 
     <!-- ================= ABOUT ================= -->
-    <section class="about section fade-up" id="about">
-        <h2 class="mask">About Our Institution</h2>
-        <div class="about-inner">
-            <div class="about-text">
-                <p>
-                    PT Lee Chengalvaraya Naicker College of Engineering &amp; Technology
-                    provides high-quality technical education in Tamil Nadu.
-                    Our focus is academic excellence, research innovation,
-                    and student empowerment.
-                </p>
+    <section class="section about-section" id="about">
+        <div class="section-inner">
+            <div class="about-text-col reveal-left">
+                <div class="section-tag">About Us</div>
+                <h2>A Legacy of <span class="accent">Excellence</span> in Engineering Education</h2>
+                <p>Founded in 1994, PT Lee Chengalvaraya Naicker College of Engineering & Technology stands as a beacon
+                    of technical excellence in Tamil Nadu. Affiliated to Anna University and approved by AICTE, we
+                    nurture future engineers with cutting-edge curriculum, world-class facilities, and industry-driven
+                    pedagogy.</p>
+                <p>Our commitment extends beyond academics — we shape leaders, innovators, and nation-builders who make
+                    a lasting difference in society and industry.</p>
+                <div class="about-highlights">
+                    <div class="hl-item">
+                        <div class="hl-icon">🏛️</div><span>Anna University Affiliated</span>
+                    </div>
+                    <div class="hl-item">
+                        <div class="hl-icon">✅</div><span>AICTE Approved</span>
+                    </div>
+                    <div class="hl-item">
+                        <div class="hl-icon">📅</div><span>30+ Years of Excellence</span>
+                    </div>
+                    <div class="hl-item">
+                        <div class="hl-icon">🌟</div><span>ISO Certified Institution</span>
+                    </div>
+                </div>
             </div>
-            <div class="about-img-wrap reveal">
-                <img src="assets/statue.jpg" alt="Founder Statue – PT Lee Chengalvaraya Naicker" class="about-img">
-                <p class="about-img-caption">Founder – P.T. Lee Chengalvaraya Naicker</p>
+            <div class="about-img-col reveal-right">
+                <div class="about-img-frame">
+                    <img src="assets/statue.jpg" alt="Founder Statue – PT Lee Chengalvaraya Naicker" class="about-img">
+                    <div class="about-img-badge">
+                        <strong>30+</strong>
+                        <span>Years of Excellence</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ================= STATS ================= -->
-    <section class="stats" id="stats">
-        <div class="stat-box slide-left">
-            <h3 data-count="1500">0</h3>
-            <p>Students</p>
-        </div>
-        <div class="stat-box fade-up">
-            <h3 data-count="120">0</h3>
-            <p>Faculty Members</p>
-        </div>
-        <div class="stat-box slide-right">
-            <h3 data-count="98">0</h3>
-            <p>% Placement</p>
+    <section class="stats-section" id="stats">
+        <div class="stats-bg-decor"></div>
+        <div class="stats-grid">
+            <div class="stat-card reveal-up">
+                <div class="stat-icon">👨‍🎓</div>
+                <h3 class="count-up" data-count="1500">0</h3>
+                <div class="stat-suffix">+</div>
+                <p>Enrolled Students</p>
+            </div>
+            <div class="stat-card reveal-up" style="--delay: 0.15s">
+                <div class="stat-icon">👩‍🏫</div>
+                <h3 class="count-up" data-count="120">0</h3>
+                <div class="stat-suffix">+</div>
+                <p>Expert Faculty</p>
+            </div>
+            <div class="stat-card reveal-up" style="--delay: 0.3s">
+                <div class="stat-icon">🏢</div>
+                <h3 class="count-up" data-count="98">0</h3>
+                <div class="stat-suffix">%</div>
+                <p>Placement Rate</p>
+            </div>
+            <div class="stat-card reveal-up" style="--delay: 0.45s">
+                <div class="stat-icon">🏆</div>
+                <h3 class="count-up" data-count="30">0</h3>
+                <div class="stat-suffix">+</div>
+                <p>Years of Excellence</p>
+            </div>
         </div>
     </section>
 
     <!-- ================= DEPARTMENTS ================= -->
-    <section class="section departments fade-up" id="departments">
-        <h2 class="mask">Our Departments</h2>
-        <div class="grid">
-            <div class="card reveal">💻 Computer Science</div>
-            <div class="card reveal">📡 Electronics &amp; Communication</div>
-            <div class="card reveal">⚡ Electrical &amp; Electronics</div>
-            <div class="card reveal">⚙️ Mechanical Engineering</div>
-            <div class="card reveal">🖥️ Information Technology</div>
-            <div class="card reveal">🤖 AI &amp; Data Science</div>
+    <section class="section departments-section" id="departments">
+        <div class="section-header">
+            <div class="section-tag">Academic Programs</div>
+            <h2>Our <span class="accent">Departments</span></h2>
+            <p class="section-sub">Choose from a wide range of industry-relevant engineering programs designed for the
+                future.</p>
+        </div>
+        <div class="dept-grid">
+            <div class="dept-card reveal-up" style="--delay:0s">
+                <div class="dept-icon-wrap" style="--c1:#0ea5e9;--c2:#0284c7">
+                    <span>💻</span>
+                </div>
+                <h3>Computer Science</h3>
+                <p>B.E – CSE</p>
+                <div class="dept-arrow">→</div>
+            </div>
+            <div class="dept-card reveal-up" style="--delay:0.1s">
+                <div class="dept-icon-wrap" style="--c1:#8b5cf6;--c2:#7c3aed">
+                    <span>📡</span>
+                </div>
+                <h3>Electronics & Comm.</h3>
+                <p>B.E – ECE</p>
+                <div class="dept-arrow">→</div>
+            </div>
+            <div class="dept-card reveal-up" style="--delay:0.2s">
+                <div class="dept-icon-wrap" style="--c1:#f59e0b;--c2:#d97706">
+                    <span>⚡</span>
+                </div>
+                <h3>Electrical & Electronics</h3>
+                <p>B.E – EEE</p>
+                <div class="dept-arrow">→</div>
+            </div>
+            <div class="dept-card reveal-up" style="--delay:0.3s">
+                <div class="dept-icon-wrap" style="--c1:#10b981;--c2:#059669">
+                    <span>⚙️</span>
+                </div>
+                <h3>Mechanical Engineering</h3>
+                <p>B.E – Mech</p>
+                <div class="dept-arrow">→</div>
+            </div>
+            <div class="dept-card reveal-up" style="--delay:0.4s">
+                <div class="dept-icon-wrap" style="--c1:#3b82f6;--c2:#1d4ed8">
+                    <span>🖥️</span>
+                </div>
+                <h3>Information Technology</h3>
+                <p>B.Tech – IT</p>
+                <div class="dept-arrow">→</div>
+            </div>
+            <div class="dept-card reveal-up new-badge-card" style="--delay:0.5s">
+                <div class="new-badge">NEW</div>
+                <div class="dept-icon-wrap" style="--c1:#ec4899;--c2:#be185d">
+                    <span>🤖</span>
+                </div>
+                <h3>Artificial Intelligence & DS</h3>
+                <p>B.Tech – AI & DS</p>
+                <div class="dept-arrow">→</div>
+            </div>
         </div>
     </section>
 
     <!-- ================= FACILITIES ================= -->
-    <section class="section facilities fade-up" id="facilities">
-        <h2 class="mask">Our Facilities</h2>
-        <div class="grid">
-            <div class="card reveal">🏫 Modern Classrooms</div>
-            <div class="card reveal">🔬 Research Labs</div>
-            <div class="card reveal">📚 Central Library</div>
-            <div class="card reveal">🏃 Sports Complex</div>
-            <div class="card reveal">🏠 Hostel &amp; Canteen</div>
-            <div class="card reveal">🚌 Transport Facility</div>
+    <section class="facilities-section" id="facilities">
+        <div class="facilities-inner">
+            <div class="section-header light">
+                <div class="section-tag light-tag">Campus Life</div>
+                <h2>World-Class <span class="accent-light">Facilities</span></h2>
+                <p class="section-sub light-sub">Everything you need to learn, grow, and thrive on campus.</p>
+            </div>
+            <div class="fac-grid">
+                <div class="fac-card reveal-up" style="--delay:0s">
+                    <div class="fac-icon">🏫</div>
+                    <h4>Smart Classrooms</h4>
+                    <p>Tech-enabled, air-conditioned classrooms with interactive boards and multimedia support.</p>
+                </div>
+                <div class="fac-card reveal-up" style="--delay:0.1s">
+                    <div class="fac-icon">🔬</div>
+                    <h4>Research Labs</h4>
+                    <p>State-of-the-art laboratories equipped with cutting-edge instruments and equipment.</p>
+                </div>
+                <div class="fac-card reveal-up" style="--delay:0.2s">
+                    <div class="fac-icon">📚</div>
+                    <h4>Central Library</h4>
+                    <p>Over 50,000 volumes, e-journals, digital resources and comfortable reading zones.</p>
+                </div>
+                <div class="fac-card reveal-up" style="--delay:0.3s">
+                    <div class="fac-icon">🏃</div>
+                    <h4>Sports Complex</h4>
+                    <p>Multi-sport facility with courts, grounds, indoor games and a well-equipped gymnasium.</p>
+                </div>
+                <div class="fac-card reveal-up" style="--delay:0.4s">
+                    <div class="fac-icon">🏠</div>
+                    <h4>Hostel & Canteen</h4>
+                    <p>Comfortable separate hostels for boys & girls with hygienic and nutritious meal facilities.</p>
+                </div>
+                <div class="fac-card reveal-up" style="--delay:0.5s">
+                    <div class="fac-icon">🚌</div>
+                    <h4>Transport Network</h4>
+                    <p>Extensive bus network covering all major routes from Kanchipuram and surrounding areas.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- ================= PLACEMENT ================= -->
-    <section class="placement section slide-left" id="placement">
-        <h2 class="mask">Placement Highlights</h2>
-        <div class="grid">
-            <div class="card reveal">🏢 Top Recruiters: TCS, Infosys, Wipro, Cognizant</div>
-            <div class="card reveal">📋 Internship Programs</div>
-            <div class="card reveal">🗣️ Soft Skill Training</div>
-            <div class="card reveal">💰 Highest Package: 8 LPA</div>
-            <div class="card reveal">🎓 98% Placement Rate</div>
-            <div class="card reveal">🤝 Industry Tie-Ups</div>
+    <section class="section placement-section" id="placement">
+        <div class="section-header">
+            <div class="section-tag">Career Success</div>
+            <h2>Placement <span class="accent">Excellence</span></h2>
+            <p class="section-sub">Our students are hired by the world's leading companies across technology & industry.
+            </p>
+        </div>
+        <div class="placement-wrap">
+            <div class="placement-stats-grid">
+                <div class="pl-stat-card reveal-left">
+                    <div class="pl-number">98<span>%</span></div>
+                    <p>Overall Placement Rate</p>
+                </div>
+                <div class="pl-stat-card reveal-up">
+                    <div class="pl-number">8<span>LPA</span></div>
+                    <p>Highest Package Offered</p>
+                </div>
+                <div class="pl-stat-card reveal-right">
+                    <div class="pl-number">100<span>+</span></div>
+                    <p>Recruiting Companies</p>
+                </div>
+            </div>
+            <div class="recruiters-section reveal-up">
+                <h3>Our Top Recruiters</h3>
+                <div class="recruiter-logos">
+                    <div class="recruiter-tag">TCS</div>
+                    <div class="recruiter-tag">Infosys</div>
+                    <div class="recruiter-tag">Wipro</div>
+                    <div class="recruiter-tag">Cognizant</div>
+                    <div class="recruiter-tag">HCL</div>
+                    <div class="recruiter-tag">Tech Mahindra</div>
+                    <div class="recruiter-tag">Accenture</div>
+                    <div class="recruiter-tag">Capgemini</div>
+                </div>
+            </div>
+            <div class="placement-features">
+                <div class="pf-item reveal-left">
+                    <div class="pf-icon">📋</div>
+                    <div>
+                        <h4>Internship Programs</h4>
+                        <p>Industry-linked internships to gain real-world experience before graduation.</p>
+                    </div>
+                </div>
+                <div class="pf-item reveal-right">
+                    <div class="pf-icon">🗣️</div>
+                    <div>
+                        <h4>Soft Skills & Aptitude Training</h4>
+                        <p>Year-round training in communication, problem-solving, and interview preparation.</p>
+                    </div>
+                </div>
+                <div class="pf-item reveal-left">
+                    <div class="pf-icon">🤝</div>
+                    <div>
+                        <h4>Industry Tie-Ups & MoUs</h4>
+                        <p>Formal partnerships with leading companies for collaborative learning and hiring.</p>
+                    </div>
+                </div>
+                <div class="pf-item reveal-right">
+                    <div class="pf-icon">🎯</div>
+                    <div>
+                        <h4>Dedicated Placement Cell</h4>
+                        <p>Full-time placement officers guiding students every step of the career journey.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- ================= EVENTS ================= -->
-    <section class="section events fade-up" id="events">
-        <h2 class="mask">Latest Events</h2>
-        <ul id="eventList"></ul>
+    <section class="section events-section" id="events">
+        <div class="section-header">
+            <div class="section-tag">What's Happening</div>
+            <h2>Latest <span class="accent">Events</span></h2>
+        </div>
+        <div class="events-layout">
+            <ul class="events-list" id="eventList"></ul>
+            <div class="events-cta reveal-right">
+                <div class="events-cta-inner">
+                    <div class="cta-icon">📅</div>
+                    <h3>Stay Up To Date</h3>
+                    <p>Never miss a campus event, seminar, or career opportunity at PT Lee CNCET.</p>
+                    <button class="btn-primary"
+                        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                        Subscribe for Updates
+                    </button>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- ================= GALLERY ================= -->
-    <section class="section gallery fade-up" id="gallery">
-        <h2 class="mask">Campus Life</h2>
-        <div class="grid gallery-grid">
-            <div class="img-zoom reveal">
+    <section class="gallery-section" id="gallery">
+        <div class="section-header light">
+            <div class="section-tag light-tag">Campus Life</div>
+            <h2>Life at <span class="accent-light">PT Lee CNCET</span></h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="g-item g-large reveal-up">
                 <img src="assets/hero.jpg" alt="College Main Gate" loading="lazy">
-                <div class="img-caption">Main Gate</div>
+                <div class="g-caption">Main Campus Gate</div>
             </div>
-            <div class="img-zoom reveal">
+            <div class="g-item reveal-up" style="--delay:0.1s">
                 <img src="assets/statue.jpg" alt="Founder Statue" loading="lazy">
-                <div class="img-caption">Founder's Statue</div>
+                <div class="g-caption">Founder's Statue</div>
             </div>
-            <div class="img-zoom reveal">
+            <div class="g-item reveal-up" style="--delay:0.2s">
                 <img src="assets/library.jpg" alt="Central Library" loading="lazy">
-                <div class="img-caption">Central Library</div>
+                <div class="g-caption">Central Library</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="section testimonials-section" id="testimonials">
+        <div class="section-header">
+            <div class="section-tag">Voices of Success</div>
+            <h2>What Our <span class="accent">Community Says</span></h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card reveal-up">
+                <div class="tcard-quote">"</div>
+                <p>PT Lee CNCET gave me not just an engineering degree, but a foundation for life. The faculty guidance
+                    and industry exposure helped me land my dream job at TCS.</p>
+                <div class="tcard-author">
+                    <div class="tcard-avatar">RK</div>
+                    <div>
+                        <strong>Rahul Kumar</strong>
+                        <span>B.E CSE, Batch 2023 · TCS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal-up" style="--delay:0.15s">
+                <div class="tcard-quote">"</div>
+                <p>As a parent, I am proud of the holistic education my daughter received. The campus is safe, the
+                    values instilled are extraordinary, and the placements are excellent.</p>
+                <div class="tcard-author">
+                    <div class="tcard-avatar" style="background:linear-gradient(135deg,#8b5cf6,#7c3aed)">SP</div>
+                    <div>
+                        <strong>Smt. Priya Sundaram</strong>
+                        <span>Parent · Kanchipuram</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal-up" style="--delay:0.3s">
+                <div class="tcard-quote">"</div>
+                <p>The research culture, modern labs and supportive faculty at PT Lee CNCET are truly commendable. A
+                    great place to shape young engineers and innovators.</p>
+                <div class="tcard-author">
+                    <div class="tcard-avatar" style="background:linear-gradient(135deg,#10b981,#059669)">DM</div>
+                    <div>
+                        <strong>Dr. Meena Devi</strong>
+                        <span>Associate Professor · ECE</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ================= CONTACT ================= -->
-    <section class="section contact slide-right" id="contact">
-        <h2 class="mask">Contact Us</h2>
-        <div class="contact-info">
-            <p>📍 Oovery, Kanchipuram, Tamil Nadu</p>
-            <p>📞 +91 73731 23570</p>
-            <p>✉️ admin@ptleecntrust.com</p>
+    <section class="section contact-section" id="contact">
+        <div class="contact-wrap">
+            <div class="contact-info-col reveal-left">
+                <div class="section-tag">Get In Touch</div>
+                <h2>We'd Love To <span class="accent">Hear From You</span></h2>
+                <p>Have questions about admissions, courses, or campus life? Reach out to us — we're always happy to
+                    help students, parents, and faculty.</p>
+                <div class="info-items">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <strong>Address</strong>
+                            <span>Oovery, Kanchipuram, Tamil Nadu – 631 502</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <strong>Phone</strong>
+                            <span>+91 73731 23570</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div>
+                            <strong>Email</strong>
+                            <span>admin@ptleecntrust.com</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🕐</div>
+                        <div>
+                            <strong>Office Hours</strong>
+                            <span>Mon–Sat: 9:00 AM – 5:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-col reveal-right">
+                <div class="contact-form-card">
+                    <h3>Send a Message</h3>
+                    <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="formName">Full Name</label>
+                                <input type="text" id="formName" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="formPhone">Phone</label>
+                                <input type="tel" id="formPhone" placeholder="+91 00000 00000">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="formEmail">Email Address</label>
+                            <input type="email" id="formEmail" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="formSubject">I am a</label>
+                            <select id="formSubject">
+                                <option value="">Select your role</option>
+                                <option>Student (Prospective)</option>
+                                <option>Current Student</option>
+                                <option>Parent / Guardian</option>
+                                <option>Faculty / Staff</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formMessage">Message</label>
+                            <textarea id="formMessage" placeholder="Write your message here..." rows="4"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary submit-btn">
+                            <span>Send Message</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5">
+                                <path d="M22 2L11 13M22 2L15 22 11 13 2 9l20-7z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <form class="contact-form" onsubmit="handleFormSubmit(event)">
-            <input type="text" id="formName" placeholder="Your Name" required>
-            <input type="email" id="formEmail" placeholder="Your Email" required>
-            <textarea id="formMessage" placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit" class="primary">Send Message</button>
-        </form>
     </section>
 
-    <footer>
-        <p>© 2026 PTLee CNCET | All Rights Reserved</p>
-        <p class="footer-tagline">Empowering Minds | Building Futures</p>
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="assets/logo.jpg" alt="PT Lee CNCET Logo" class="footer-logo">
+                <div>
+                    <div class="footer-name">PTLEE <strong>CNCET</strong></div>
+                    <div class="footer-tagline">Empowering Minds · Building Futures</div>
+                </div>
+            </div>
+            <div class="footer-links-group">
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#departments">Departments</a>
+                    <a href="#facilities">Facilities</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Academics</h4>
+                    <a href="#departments">B.E – CSE</a>
+                    <a href="#departments">B.E – ECE</a>
+                    <a href="#departments">B.Tech – IT</a>
+                    <a href="#departments">B.Tech – AI & DS</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Students</h4>
+                    <a href="#events">Events & News</a>
+                    <a href="#placement">Placement Cell</a>
+                    <a href="#gallery">Campus Gallery</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 PT Lee Chengalvaraya Naicker College of Engineering & Technology. All Rights Reserved.</p>
+            <p class="footer-affil">Anna University Affiliated · AICTE Approved · ISO Certified</p>
+        </div>
     </footer>
 
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
     <!-- ================= SCRIPTS ================= -->
-    <!-- GSAP Core -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <!-- GSAP ScrollTrigger Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <!-- Main Script -->
     <script src="script.js"></script>
 
 </body>
