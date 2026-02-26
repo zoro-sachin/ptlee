@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Lee CNCET | Official Website</title>
+    <meta name="description"
+        content="PT Lee Chengalvaraya Naicker College of Engineering & Technology – Affiliated to Anna University | Approved by AICTE. Quality technical education in Tamil Nadu.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= LOADER ================= -->
+    <div class="loader" id="loader">
+        <img src="assets/logo.jpg" alt="PT Lee CNCET Logo" class="loader-logo">
+        <span class="loader-text">PTLEE CNCET</span>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header class="topbar">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.jpg" alt="PT Lee CNCET Logo" class="topbar-logo">
+                PTLEE CNCET
+            </div>
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#about">About</a>
+                        <ul class="submenu">
+                            <li><a href="#about">Vision &amp; Mission</a></li>
+                            <li><a href="#about">Approvals</a></li>
+                            <li><a href="#about">Principal Desk</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#departments">Departments</a>
+                        <ul class="submenu">
+                            <li><a href="#departments">B.E – CSE</a></li>
+                            <li><a href="#departments">B.E – ECE</a></li>
+                            <li><a href="#departments">B.E – EEE</a></li>
+                            <li><a href="#departments">B.E – Mechanical</a></li>
+                            <li><a href="#departments">B.Tech – IT</a></li>
+                            <li><a href="#departments">B.Tech – AI &amp; DS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#facilities">Facilities</a></li>
+                    <li><a href="#placement">Placement</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero parallax" id="home" style="background-image: url('assets/hero.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content hero-split">
+
+            <!-- LEFT: Text -->
+            <div class="hero-text-col">
+                <div class="hero-badge">🎓 Affiliated to Anna University</div>
+                <h1 class="stagger">Empowering Minds,<br><br>Building Futures</h1>
+                <p class="hero-sub">PT Lee Chengalvaraya Naicker College of Engineering &amp; Technology<br>
+                    <span>Approved by AICTE &nbsp;|&nbsp; Kanchipuram, Tamil Nadu</span>
+                </p>
+                <div class="hero-btns">
+                    <button class="primary"
+                        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Apply
+                        Now</button>
+                    <button class="outline"
+                        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Admission
+                        Enquiry</button>
+                </div>
+                <div class="hero-stats-row">
+                    <div class="hstat"><strong>1500+</strong><span>Students</span></div>
+                    <div class="hstat"><strong>120+</strong><span>Faculty</span></div>
+                    <div class="hstat"><strong>98%</strong><span>Placement</span></div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Founder Statue -->
+            <div class="hero-statue-col">
+                <div class="statue-ring">
+                    <div class="statue-glow"></div>
+                    <img src="assets/statue_front.jpg" alt="Founder – PT Lee Chengalvaraya Naicker"
+                        class="hero-statue-img">
+                    <div class="statue-label">Thiru P.T. Lee Chengalvaraya Naicker<br><em>Founder</em></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= NOTICE TICKER ================= -->
+    <section class="notice">
+        <div class="notice-label">📢 Latest:</div>
+        <div class="notice-content">
+            <marquee>Admissions Open 2026 | AI &amp; DS Department Intake 60 | Campus Placement Drive March 15 | Anna
+                University Sports Winners 🏆 | New Hostel Facility Available</marquee>
+        </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about section fade-up" id="about">
+        <h2 class="mask">About Our Institution</h2>
+        <div class="about-inner">
+            <div class="about-text">
+                <p>
+                    PT Lee Chengalvaraya Naicker College of Engineering &amp; Technology
+                    provides high-quality technical education in Tamil Nadu.
+                    Our focus is academic excellence, research innovation,
+                    and student empowerment.
+                </p>
+            </div>
+            <div class="about-img-wrap reveal">
+                <img src="assets/statue.jpg" alt="Founder Statue – PT Lee Chengalvaraya Naicker" class="about-img">
+                <p class="about-img-caption">Founder – P.T. Lee Chengalvaraya Naicker</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= STATS ================= -->
+    <section class="stats" id="stats">
+        <div class="stat-box slide-left">
+            <h3 data-count="1500">0</h3>
+            <p>Students</p>
+        </div>
+        <div class="stat-box fade-up">
+            <h3 data-count="120">0</h3>
+            <p>Faculty Members</p>
+        </div>
+        <div class="stat-box slide-right">
+            <h3 data-count="98">0</h3>
+            <p>% Placement</p>
+        </div>
+    </section>
+
+    <!-- ================= DEPARTMENTS ================= -->
+    <section class="section departments fade-up" id="departments">
+        <h2 class="mask">Our Departments</h2>
+        <div class="grid">
+            <div class="card reveal">💻 Computer Science</div>
+            <div class="card reveal">📡 Electronics &amp; Communication</div>
+            <div class="card reveal">⚡ Electrical &amp; Electronics</div>
+            <div class="card reveal">⚙️ Mechanical Engineering</div>
+            <div class="card reveal">🖥️ Information Technology</div>
+            <div class="card reveal">🤖 AI &amp; Data Science</div>
+        </div>
+    </section>
+
+    <!-- ================= FACILITIES ================= -->
+    <section class="section facilities fade-up" id="facilities">
+        <h2 class="mask">Our Facilities</h2>
+        <div class="grid">
+            <div class="card reveal">🏫 Modern Classrooms</div>
+            <div class="card reveal">🔬 Research Labs</div>
+            <div class="card reveal">📚 Central Library</div>
+            <div class="card reveal">🏃 Sports Complex</div>
+            <div class="card reveal">🏠 Hostel &amp; Canteen</div>
+            <div class="card reveal">🚌 Transport Facility</div>
+        </div>
+    </section>
+
+    <!-- ================= PLACEMENT ================= -->
+    <section class="placement section slide-left" id="placement">
+        <h2 class="mask">Placement Highlights</h2>
+        <div class="grid">
+            <div class="card reveal">🏢 Top Recruiters: TCS, Infosys, Wipro, Cognizant</div>
+            <div class="card reveal">📋 Internship Programs</div>
+            <div class="card reveal">🗣️ Soft Skill Training</div>
+            <div class="card reveal">💰 Highest Package: 8 LPA</div>
+            <div class="card reveal">🎓 98% Placement Rate</div>
+            <div class="card reveal">🤝 Industry Tie-Ups</div>
+        </div>
+    </section>
+
+    <!-- ================= EVENTS ================= -->
+    <section class="section events fade-up" id="events">
+        <h2 class="mask">Latest Events</h2>
+        <ul id="eventList"></ul>
+    </section>
+
+    <!-- ================= GALLERY ================= -->
+    <section class="section gallery fade-up" id="gallery">
+        <h2 class="mask">Campus Life</h2>
+        <div class="grid gallery-grid">
+            <div class="img-zoom reveal">
+                <img src="assets/hero.jpg" alt="College Main Gate" loading="lazy">
+                <div class="img-caption">Main Gate</div>
+            </div>
+            <div class="img-zoom reveal">
+                <img src="assets/statue.jpg" alt="Founder Statue" loading="lazy">
+                <div class="img-caption">Founder's Statue</div>
+            </div>
+            <div class="img-zoom reveal">
+                <img src="assets/library.jpg" alt="Central Library" loading="lazy">
+                <div class="img-caption">Central Library</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact slide-right" id="contact">
+        <h2 class="mask">Contact Us</h2>
+        <div class="contact-info">
+            <p>📍 Oovery, Kanchipuram, Tamil Nadu</p>
+            <p>📞 +91 73731 23570</p>
+            <p>✉️ admin@ptleecntrust.com</p>
+        </div>
+        <form class="contact-form" onsubmit="handleFormSubmit(event)">
+            <input type="text" id="formName" placeholder="Your Name" required>
+            <input type="email" id="formEmail" placeholder="Your Email" required>
+            <textarea id="formMessage" placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit" class="primary">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 PTLee CNCET | All Rights Reserved</p>
+        <p class="footer-tagline">Empowering Minds | Building Futures</p>
+    </footer>
+
+    <!-- ================= SCRIPTS ================= -->
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- GSAP ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Main Script -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
